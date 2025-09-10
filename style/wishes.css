@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  color: #333; /* teks gelap agar kontras */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; /* gelap elegan */
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover, .navbar .active {
+  color: #ff6ec4; /* hover matching tombol Next */
+}
+
+/* Wishes Container */
+.wishes-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  font-size: 1.3em;
+  max-width: 700px;
+  line-height: 1.8;
+  min-height: 200px;
+}
+
+/* Tombol Next Fixed */
+.next-button a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.next-button a:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}

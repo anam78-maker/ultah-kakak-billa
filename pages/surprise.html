@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Memes for Billa</title>
+  <link rel="stylesheet" href="../style/meme.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="../index.html">🏠 Home</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="wishes.html">💌 Wishes</a>
+    <a href="surprise.html" class="active">🎁 Surprise</a>
+  </div>
+
+  <!-- Meme Galeri -->
+  <div class="meme-container">
+    <h1> Fun Memes for Billa</h1>
+    <div class="meme-grid">
+      <!-- Auto-generate meme images -->
+      <!-- kamu bisa tambahkan lebih banyak jika perlu -->
+      <script>
+        const memeContainer = document.currentScript.parentElement;
+        for (let i = 1; i <= 21; i++) {
+          const img = document.createElement('img');
+          img.src = `../galeri_meme/meme${i}.JPG`;
+          img.alt = `Meme ${i}`;
+          memeContainer.appendChild(img);
+        }
+      </script>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <!-- Tombol Back -->
+  <div class="next-button">
+    <a href="../index.html">Back to Home ⬅</a>
+  </div>
+
+  <script src="../script/meme.js"></script>
+</body>
+</html>
